@@ -1,0 +1,94 @@
+<!doctype html>
+<!--- Author: Cseca Gazzolo !-->
+<!--- Created: 07/12/2021 !-->
+<!--- Updated: 07/12/2021 !-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta name=author content="Cseca Gazzolo">
+    <title>One-Liner</title>
+</head>
+<body>
+    <header>
+        <h1>One-Liner</h1>
+        <h2>For all your (pixel-based) continuous line-drawing needs.</h2>
+    </header>
+    <button type="button" id="clear-btn">New Drawing</button>
+    <div id = "draw-div">
+        <div id="color-div">
+            <div id="red" class="color-box"></div>
+            <div id="orange" class="color-box"></div>
+            <div id="yellow" class="color-box"></div>
+            <div id="lightgreen" class="color-box"></div>
+            <div id="darkgreen" class="color-box"></div>
+            <div id="lightblue" class="color-box"></div>
+            <div id="darkblue" class="color-box"></div>
+            <div id="purple" class="color-box"></div>
+            <div id="pink" class="color-box"></div>
+            <div id="brown" class="color-box"></div>
+            <div id="grey" class="color-box"></div>
+            <div id="black" class="color-box"></div>
+            <div id="white" class="color-box"></div>
+        </div>
+        <div id="box-grid">
+        </div>
+    </div>
+<script>
+    const boxGrid = document.getElementById("box-grid");
+    const clearBtn = document.getElementById("clear-btn");
+    const colorBoxes = document.querySelectorAll(".color-box");
+    let currentColor = "black";
+    
+    function initializeGrid(numSquares){
+        for(let i = 1; i<=numSquares; i++){
+            let thisBox = document.createElement("div");
+            thisBox.setAttribute("id", "box"+i);
+            thisBox.setAttribute("class", "box");
+
+            boxGrid.appendChild(thisBox);
+        }
+    }
+
+    initializeGrid(10000);
+
+    let boxes = document.querySelectorAll(".box");
+
+    boxes.forEach(function(box){
+        box.addEventListener("mouseover", function(box) {
+            this.style.backgroundColor = currentColor;
+        });
+    });
+
+    function initializeColors(){
+        colorBoxes.forEach(function(box){
+            let thisColor = box.getAttribute("id");
+            box.style.backgroundColor = thisColor;
+
+            box.addEventListener("click", function(e) {
+                currentColor = box.getAttribute("id");
+            })
+        });
+    }
+
+    initializeColors();
+    
+    clearBtn.addEventListener("click", clearGrid);
+
+    function clearGrid(){
+        boxes.forEach(function(box){
+            if(box.style.backgroundColor !== "white"){
+                box.style.transition = "background-color 0.5s ease";
+                box.style.backgroundColor = "white";
+            }
+        });
+    }
+
+
+</script>
+</body>
+</html>
