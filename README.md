@@ -17,7 +17,7 @@ This site was a riff on The Odin Project's Etch-a-Sketch project (linked below).
 * Create separate classes for elements (Color, Color Bar, Grid, etc.) 
 
 ## Instructions
-[Link to GitHub Pages site for One-Liner](https://csecrepublic.github.io/one-liner/)
+No installation required. Just follow this [link to the GitHub Pages site](https://csecrepublic.github.io/one-liner/).
 
 ## Credits
 This is a riff on [The Odin Project's Etch-a-Sketch project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project). Credit to the awesome folks at TOP!
