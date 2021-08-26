@@ -1,11 +1,24 @@
-Link: https://csecrepublic.github.io/one-liner/
+# One-Liner
+A continuous line-drawing desktop app.
 
-One-Liner (a riff on The Odin Project's Etch-a-Sketch Project)
+## Description
+One-Liner is a continuous line-drawing application for desktop use. The user can pick a color from the color menu, then begin drawing using mouseover (like an Etch-a-Sketch).
 
-PROJECT DESCRIPTION: Allows user to pick a color and draw (with mouseover, Etch-a-Sketch-style) on a 100x100 grid.
+This site was a riff on The Odin Project's Etch-a-Sketch project (linked below). I practiced using event listeners, manipulating the DOM, and other basic front-end skills.
 
-SKILLS DEMONSTRATED: 
--Basic Javascript
--Basic HTML/CSS
--Event listeners
--DOM manipulation
+## Technologies
+* JavaScript
+* HTML
+* CSS
+
+## Issues & ideas
+* Optimize for mobile
+* Add an eraser button (hack: use the white pen to "erase" other colors!)
+* Create separate classes for elements (Color, Color Bar, Grid, etc.) 
+
+## Instructions
+[Link to GitHub Pages site for One-Liner](https://csecrepublic.github.io/one-liner/)
+
+## Credits
+This is a riff on [The Odin Project's Etch-a-Sketch project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project). Credit to the awesome folks at TOP!
+
